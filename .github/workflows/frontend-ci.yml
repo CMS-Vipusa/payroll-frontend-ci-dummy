@@ -34,7 +34,7 @@ jobs:
         shell: bash
         run: |
           IMAGE_TAG=${GITHUB_SHA::8}
-          IMAGE_NAME=${{ secrets.DOCKER_USERNAME }}/frontend
+          IMAGE_NAME=${{ secrets.DOCKER_USERNAME }}/payroll_sys_front
           docker build -t $IMAGE_NAME:$IMAGE_TAG .
           docker push $IMAGE_NAME:$IMAGE_TAG
           echo "image-tag=$IMAGE_TAG" >> $GITHUB_OUTPUT
