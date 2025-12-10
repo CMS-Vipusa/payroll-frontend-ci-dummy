@@ -2,7 +2,8 @@
 import { getPublicIP } from "../utils/getIP";
 
 // Base URL (same as you had)
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:4000/api';
+const API_BASE = '/api';
+console.log('API_BASE set to:', API_BASE);
 
 // ---- Token helpers -------------------------------------------------
 function getToken() {
